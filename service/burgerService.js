@@ -2,7 +2,7 @@ const Burger = require('../model/burger')
 const handle = require('../error/error-handler')
 
 const addBurger = async (BurgerDTO) => {
-    await new Burger(BurgerDTO).save().catch(handle)
+    return await Burger(BurgerDTO).save().catch(handle)
 }
 
 const getBurgers = async (page,pageSize) => {
